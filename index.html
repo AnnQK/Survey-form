@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="author" content="Anna">
+      
+      <link rel="stylesheet" href="css/style.css">
+      <title>Survey Form</title>
+    </head>
+    <body>
+      <header>
+        <h1 id="title">Responsive survey form</h1>
+        <p id="description">Help us to get better: leave some information</p>
+      </header>
+      
+        <form id="survey-form" method="post">
+          <fieldset class="personal">
+            <legend>Personal info</legend>
+
+            <div class="survey">
+              <lavel class="label-choice" for="name">Name:</lavel>
+              <input id="name" type="text" name="user-name" placeholder="Name" required>
+            </div>
+             
+            <div class="survey">
+              <label class="label-choice" for="email">E-mail:</label>
+              <input id="email" type="email" name="user-email" placeholder="E-mail" required>
+            </div>
+
+            <div class="survey">
+              <label class="label-choice" for="age">How old are you?</label>
+              <input id="age"  name="age" type="number" max="99" min="8" placeholder="Years">
+            </div>
+
+          </fieldset> 
+          <fieldset class=pref>
+            <legend>Preferences</legend>
+
+            <div class="living">
+              <label for="dropdown">What are you doing for living?</label>
+              <select id="dropdown" name="life" required>
+                <option disabled selected value>Select iption</option>
+                <option value="student">I'm a student</option>
+                <option value="job">I have a job</option>
+                <option value="none">Don't want to tell</option>
+                <option value="learner">I just want to learn</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="news">
+              <p>Do you want to continue recive our news and articals?</p>
+              <label class="label-choice"><input name="user-pref" value="definitely" type="radio" checked class="input-radio">Definitely</label>
+              <label class="label-choice">
+                <input type="radio" name="user-pref" value="hell-no" class="input-radio">Hell no!
+              </label>
+            </div>
+
+            <div class="skills">
+              <p>What are you looking for?</p>
+              <label class="label-choice">
+                <input type="checkbox" name="skills" value="front-end" class="input-checkbox">Front-end
+              </label>
+              <label class="label-choice">
+                <input type="checkbox" name="skills" value="back-end" class="input-checkbox">Back-end
+              </label>
+              <label class="label-choice">
+                <input type="checkbox" name="skills" value="design" class="input-checkbox">Design
+              </label>
+              <label class="label-choice">
+                <input type="checkbox" name="skills" value="data" class="input-checkbox">Data science
+              </label>
+              <label class="label-choice">
+                <input type="checkbox" name="skills" value="open-source" class="input-checkbox">Open Source
+              </label>
+              <label class="label-choice">
+                <input type="checkbox" name="skills" value=community" class="input-checkbox">Community
+              </label>
+            </div>
+
+            <div class="text">
+              <p>Have a suggestion?</p>
+              <textarea id="comments" placeholder="Enter your thoughts" name="comment" class="input-text"></textarea>
+            </div>
+          </fieldset>
+          <div class="survey">
+            <button type="submit" id="submit">Submit</button>
+          </div>
+        </form>
+      
+    </body>
+  </html>
